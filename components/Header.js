@@ -1,11 +1,6 @@
 import { useState } from "react";
 import NavLink from "./NavLink";
 
-const variants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: "-1000%" },
-}
-
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false)
     const handleClick = (e) => {
