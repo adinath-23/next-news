@@ -1,5 +1,4 @@
 import NewsArticle from "./NewsArticle";
-import { AnimatePresence, motion } from "framer-motion";
 
 
 const NewsList = ({ newsData }) => {
