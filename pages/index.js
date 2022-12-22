@@ -29,5 +29,6 @@ export const getStaticProps = async () => {
     props: {
       news
     },
+    revalidate: 7200 //update every 2 hrs
   }
 }
