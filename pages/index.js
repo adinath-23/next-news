@@ -29,7 +29,13 @@ export const getStaticProps = async () => {
       }
     }
     return {
-      imageUrl, age, title: article.title, description: article.description, newsUrl: article.url
+      imageUrl,
+      age,
+      title: article.title,
+      description: article.description,
+      newsUrl: article.url,
+      source: article.source.name,
+      author: article.author
     }
   })
   return {

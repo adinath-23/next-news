@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 const NewsArticle = ({ newsArticle }) => {
-    const { imageUrl, age, title, description, newsUrl } = newsArticle
+    const { imageUrl, age, title, description, newsUrl, author, source } = newsArticle
     return (
         <motion.li
             initial={{ opacity: 0, x: '-50%' }}
@@ -20,13 +19,13 @@ const NewsArticle = ({ newsArticle }) => {
                 <div>
                     <h2 className="text-2xl font-semibold text-slate-100  md:text-3xl tracking-wide mb-2">{title}</h2>
                     <p className=" text-slate-400 ">{description}</p>
-                    <Link
-                        className="text-rose-500 w-max"
+                    <a
+                        className="text-rose-600 w-max"
                         href={newsUrl}
-                        target='_blank'
-                    >Read more</Link>
+                        target='_blank' rel="noreferrer"
+                    >Read more at {source}</a>
                 </div>
-                <p className="text-slate-500">Publised on <time>{age}</time></p>
+                <p className="text-slate-500">Publised on <time>{age}</time> {author && <span className="font-medium">- {author}</span>}</p>
             </div>
         </motion.li>
     )
