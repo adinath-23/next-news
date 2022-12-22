@@ -1,7 +1,5 @@
 import { useState } from "react";
 import NavLink from "./NavLink";
-import { AnimatePresence, motion } from "framer-motion";
-import useMediaQuery from "../hooks/useMediaQuery";
 
 const variants = {
     open: { opacity: 1, y: 0 },
