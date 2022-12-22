@@ -17,13 +17,13 @@ const Category = (props) => {
         title = 'Business - Stay informed on the latest business news and trends | Next News'
         description = "Stay informed on the latest business news and trends with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From finance and economics to market updates and company news, we've got you covered all in one place."
     } else if (category === 'health') {
-        title = 'Business - Stay informed on the latest health news and trends | Next News'
+        title = 'Health - Stay informed on the latest health news and trends | Next News'
         description = "Stay informed on the latest health news and trends with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From medical research and wellness tips to disease prevention and treatment options, we've got you covered all in one place."
     } else if (category === 'sports') {
-        title = 'Business - Stay informed on the latest sports news and events | Next News'
+        title = 'Sports - Stay informed on the latest sports news and events | Next News'
         description = "Stay informed on the latest sports news and events with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From game updates and player news to analysis and commentary, we've got you covered all in one place."
     } else if (category === 'science') {
-        title = 'Business - Stay informed on the latest science news and discoveries | Next News'
+        title = 'Science - Stay informed on the latest science news and discoveries | Next News'
         description = "Stay informed on the latest science news and discoveries with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From groundbreaking research to technological innovations, we've got you covered all in one place."
     }
 
