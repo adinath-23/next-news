@@ -19,7 +19,19 @@ const Header = () => {
 
             <nav className="flex justify-between" >
                 <h1 className="text-lg font-extrabold tracking-widest w-max text-rose-500 p-2 px-4  border border-rose-500">NEXT NEWS</h1>
-                <button onClick={handleClick} className="p-1 md:hidden bg-lime-500">Open</button>
+                <button onClick={handleClick} className='md:hidden'>
+                    {showMenu ?
+                        (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-rose-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>)
+                        : (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 text-rose-500 h-10">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        )}
+
+
+                </button>
             </nav>
             <nav
                 className={`${showMenu ? 'flex absolute -ml-3 top-full w-full bg-gradient-to-t from-transparent to-slate-900 backdrop-brightness-50 backdrop-blur-xl  py-2 rounded-b-2xl border-b border-lime-500' : 'hidden md:flex'}  flex-col md:flex-row gap-2`} >
