@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <>
             <Header />
             <div className=" overflow-hidden min-h-screen relative bg-slate-800 text-indigo-500 ">
-                <AnimatePresence>
+                <AnimatePresence initial={false} mode='wait'>
                     <motion.main
                         key={category}
                         initial={{ opacity: 0, x: '-100%' }}
