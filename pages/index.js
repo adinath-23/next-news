@@ -1,8 +1,15 @@
+import Head from "next/head"
 import NewsList from "../components/NewsList"
 
 export default function Home(props) {
   return (
-    <NewsList newsData={props.news} category='home' />
+    <>
+      <Head>
+        <title>Next News - Stay informed on the latest news and current events | Home</title>
+        <meta name="description" content="Stay informed on the latest news and current events with Next News. We bring you relevant and accurate articles from top news sources around the world. From politics to sports and entertainment, we've got you covered." />
+      </Head>
+      <NewsList newsData={props.news} />
+    </>
   )
 }
 

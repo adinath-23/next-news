@@ -1,14 +1,41 @@
-import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import NewsList from "../../components/NewsList";
+import Head from "next/head";
 
 const Category = (props) => {
     const router = useRouter()
     const { category } = router.query
+    let description;
+    let title;
+    if (category === 'technology') {
+        title = 'Technology - Stay informed on the latest technology news and trends | Next News'
+        description = "Stay informed on the latest technology news and trends with Next News. Our comprehensive coverage includes relevant and accurate articles from top tech sources around the world. From product releases and company updates to emerging technologies, we've got you covered all in one place"
+    } else if (category === 'entertainment') {
+        title = 'Entertainment - Stay informed on the latest entertainment news and trends | Next News'
+        description = "Stay informed on the latest entertainment news and trends with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From movie and TV releases to celebrity gossip and pop culture, we've got you covered all in one place."
+    } else if (category === 'business') {
+        title = 'Business - Stay informed on the latest business news and trends | Next News'
+        description = "Stay informed on the latest business news and trends with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From finance and economics to market updates and company news, we've got you covered all in one place."
+    } else if (category === 'health') {
+        title = 'Business - Stay informed on the latest health news and trends | Next News'
+        description = "Stay informed on the latest health news and trends with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From medical research and wellness tips to disease prevention and treatment options, we've got you covered all in one place."
+    } else if (category === 'sports') {
+        title = 'Business - Stay informed on the latest sports news and events | Next News'
+        description = "Stay informed on the latest sports news and events with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From game updates and player news to analysis and commentary, we've got you covered all in one place."
+    } else if (category === 'science') {
+        title = 'Business - Stay informed on the latest science news and discoveries | Next News'
+        description = "Stay informed on the latest science news and discoveries with Next News. Our comprehensive coverage includes relevant and accurate articles from top sources around the world. From groundbreaking research to technological innovations, we've got you covered all in one place."
+    }
+
     return (
         <>
+            <Head>
+                <title>{title}</title>
+                <meta name="description" content={description} key="desc" />
+
+            </Head>
             <h1 className="p-5 text-2xl font-bold text-slate-100 uppercase tracking-widest text-center">{category}</h1>
-            <NewsList newsData={props.news} category={category} />
+            <NewsList newsData={props.news} />
         </>
     )
 }
