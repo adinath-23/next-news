@@ -6,6 +6,7 @@ export default function Home(props) {
     <>
       <Head>
         <title>Next News - Stay informed on the latest news and current events | Home</title>
+        <meta name="google-site-verification" content="qhfp4mZtmssm9ccGCKCutyl3aqY-M7aeWBvhqUt-G-c" />
         <meta name="description" content="Stay informed on the latest news and current events with Next News. We bring you relevant and accurate articles from top news sources around the world. From politics to sports and entertainment, we've got you covered." />
       </Head>
       <NewsList newsData={props.news} />
